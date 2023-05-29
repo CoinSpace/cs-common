@@ -1,0 +1,36 @@
+{
+  "name": "@coinspace/cs-common",
+  "version": "1.0.0",
+  "description": "Common tools for Coin Wallet",
+  "type": "module",
+  "main": "index.js",
+  "scripts": {
+    "test": "mocha --recursive",
+    "lint": "eslint ."
+  },
+  "author": "",
+  "license": "MIT",
+  "dependencies": {
+    "big.js": "^6.2.1",
+    "p-memoize": "^7.1.1"
+  },
+  "devDependencies": {
+    "eslint": "^8.41.0",
+    "eslint-config-coinspace": "^2.1.1",
+    "mocha": "^10.2.0"
+  },
+  "eslintConfig": {
+    "extends": [
+      "coinspace"
+    ],
+    "env": {
+      "node": true,
+      "browser": true,
+      "mocha": true
+    },
+    "parserOptions": {
+      "requireConfigFile": false,
+      "sourceType": "module"
+    }
+  }
+}

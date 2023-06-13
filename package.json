@@ -1,6 +1,6 @@
 {
   "name": "@coinspace/cs-common",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "Common tools for Coin Wallet",
   "type": "module",
   "main": "index.js",

@@ -3,7 +3,12 @@
   "version": "1.0.5",
   "description": "Common tools for Coin Wallet",
   "type": "module",
-  "main": "index.js",
+  "main": "./index.js",
+  "exports": {
+    ".": "./index.js",
+    "./errors": "./lib/errors.js",
+    "./utils": "./lib/utils.js"
+  },
   "scripts": {
     "test": "mocha --recursive",
     "lint": "eslint ."

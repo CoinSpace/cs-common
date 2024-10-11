@@ -28,6 +28,18 @@ describe('Transaction', () => {
     });
   });
 
+  it('should throw invalid action', () => {
+    assert.throws(() => {
+      new Transaction({
+        status: Transaction.STATUS_SUCCESS,
+        action: 'foo',
+      });
+    }, {
+      name: 'TypeError',
+      message: 'unsupported action: foo',
+    });
+  });
+
   it('should throw invalid amount', () => {
     assert.throws(() => {
       new Transaction({

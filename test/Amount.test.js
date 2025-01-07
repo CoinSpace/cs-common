@@ -48,6 +48,13 @@ describe('Amount', () => {
       assert.equal(amount.decimals, 0);
       assert.equal(amount.toString(), '-1234567890');
     });
+
+    it('should create valid 0 amount with decimals', () => {
+      const amount = new Amount(0n, 6);
+      assert.equal(amount.value, 0n);
+      assert.equal(amount.decimals, 6);
+      assert.equal(amount.toString(), '0');
+    });
   });
 
   describe('#fromString', () => {
@@ -91,6 +98,13 @@ describe('Amount', () => {
       assert.equal(amount.value, -1234567890n);
       assert.equal(amount.decimals, 0);
       assert.equal(amount.toString(), '-1234567890');
+    });
+
+    it('should create valid 0 amount with decimals', () => {
+      const amount = Amount.fromString('0', 6);
+      assert.equal(amount.value, 0n);
+      assert.equal(amount.decimals, 6);
+      assert.equal(amount.toString(), '0');
     });
   });
 });

@@ -15,7 +15,7 @@
   },
   "scripts": {
     "test": "mocha --recursive",
-    "lint": "eslint ."
+    "lint": "eslint --report-unused-disable-directives ."
   },
   "author": "",
   "license": "MIT",
@@ -24,22 +24,8 @@
     "p-memoize": "^7.1.1"
   },
   "devDependencies": {
-    "eslint": "^8.41.0",
-    "eslint-config-coinspace": "^2.1.1",
-    "mocha": "^10.2.0"
-  },
-  "eslintConfig": {
-    "extends": [
-      "coinspace"
-    ],
-    "env": {
-      "node": true,
-      "browser": true,
-      "mocha": true
-    },
-    "parserOptions": {
-      "requireConfigFile": false,
-      "sourceType": "module"
-    }
+    "eslint": "^9.17.0",
+    "eslint-config-coinspace": "^3.0.0",
+    "mocha": "^11.0.0"
   }
 }
